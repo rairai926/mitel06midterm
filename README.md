@@ -1,5 +1,5 @@
 
-# EL106 Authentication API (Django + DRF)
+# EL106 (Django Authentication API Module) Midterm Examination
 
 **Author:** John Ryan Mag-usara  
 **Contact:** magusara.johnryan@gmail.com  
