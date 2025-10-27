@@ -1,0 +1,26 @@
+{% extends 'users/base.html' %}
+{% load static %}
+{% block title %}Profile{% endblock %}
+
+{% block content %}
+<div class="row align-items-center">
+  <div class="col-md-4">
+    <img src="{% static 'vendors/images/ban.png' %}" alt="" />
+  </div>
+  <div class="col-md-8">
+    <h4 class="font-20 weight-500 mb-10 text-capitalize">
+      Welcome
+      <div class="weight-600 font-30 text-blue">{{ user.username }}!</div>
+    </h4>
+    <p class="font-18 max-width-600"><strong>Email:</strong> {{ user.email }}</p>
+    <p class="font-18 max-width-600">
+      <strong>Status:</strong>
+      {% if user.is_active %}
+        <span style="background-color:#28a745; color:white; padding:4px 10px; border-radius:8px;">Verified</span>
+      {% else %}
+        <span style="background-color:#dc3545; color:white; padding:4px 10px; border-radius:8px;">Unverified</span>
+      {% endif %}
+    </p>
+  </div>
+</div>
+{% endblock %}
